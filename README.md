@@ -1,0 +1,7 @@
+- Create git repo
+  - mkdir `projectName`
+  - cd `projectName`
+  - git init
+  - touch `README.md`
+  - git add `README.md`
+  - git commit -m `Create Repo`
