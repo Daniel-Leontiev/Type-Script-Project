@@ -16,3 +16,14 @@
 - Add Remote Origin
   - git remote add origin git@github.com:`userName`/Type-Script-Project.git
   - git push origin master
+
+---
+
+- Mermaid diagram https://github.com/mermaid-js/mermaid/blob/develop/docs/sequenceDiagram.md
+```mermaid
+sequenceDiagram
+    A-->>B: Request
+    B-->>A: Response
+```
+
+---
