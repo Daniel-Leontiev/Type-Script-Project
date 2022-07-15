@@ -61,7 +61,8 @@ sequenceDiagram
   ```
   { 
     "scripts": {
-      "tsc": "tsc"
+      "build": "tsc"
+      "buildw": "tsc --watch"
     }
   }
   ```
@@ -74,7 +75,39 @@ sequenceDiagram
   ```
   {
     "scripts": {
-      "run": "node ./build/main.js"
+      "run-node": "node ./build/main.js"
     }
   }
+  ```
+
+- Install `webpack`
+  - `npm install webpack@latest webpack-cli@latest --save-dev`
+  - Create `webpack.config.js`
+  ```
+  const path = require('path');
+
+  module.exports = {
+    entry: './src/main.ts',
+    output: {
+        filename: 'main.js',
+        path: path.resolve(__dirname, 'public'),
+    }
+  }
+  ```
+
+- Create `public/index.html`
+  - `mkdir public`
+  - `cd public`
+  - `touch index.html`
+  ```
+  <!DOCTYPE html>
+  <html>
+      <head>
+          <meta charset="utf-8" />
+          <title>Typescript Boilerplate project</title>
+      </head>
+      <body>
+          <script src="main.js"></script>
+      </body>
+  </html>
   ```
