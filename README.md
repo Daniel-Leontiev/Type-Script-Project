@@ -94,6 +94,15 @@ sequenceDiagram
     }
   }
   ```
+  - Add `webpack` build scripts
+  ```
+  {
+    "scripts": {
+      "webpack": "webpack --mode=development",
+      "webpackw": "webpack --mode=development --watch"
+    }
+  }
+  ```
 
 - Create `public/index.html`
   - `mkdir public`
@@ -110,4 +119,15 @@ sequenceDiagram
           <script src="main.js"></script>
       </body>
   </html>
+  ```
+
+- Install `open-cli` to run html localy
+  - `npm install open-cli --save-dev`
+  - Update `open-cli` script
+  ```
+  {
+    "scripts": {
+      "run-html": "open-cli ./public/index.html"
+    }
+  }
   ```
