@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "tsc": "tsc",
+    "run": "node ./build/main.js"
+  },
+  "devDependencies": {
+    "typescript": "^4.7.4"
+  }
+}
