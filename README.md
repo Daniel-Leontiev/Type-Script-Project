@@ -11,6 +11,9 @@
 - Create GitBub Repo
   - curl -i -u '`userName`':$GITHUB_TOKEN https://api.github.com/user/repos -d `'{"name": "Type Script Project", "description": "Boiler plate Typescript Project"}`'
 
+- Git REST API
+  - https://docs.github.com/en/rest/guides/getting-started-with-the-rest-api
+
 ---
 
 - Add Remote Origin
