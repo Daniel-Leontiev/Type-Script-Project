@@ -18,10 +18,13 @@
         "outDir": "./build/",
         "baseUrl": ".",
         "paths": {
-            "*": ["src/*"]
+            "*": ["src/*", "packages/*"]
         }
     },
     "exclude": [
         "node_modules"
+    ],
+    "include": [
+        "packages", "src"
     ]
 }

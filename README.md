@@ -82,6 +82,7 @@ sequenceDiagram
 
 - Install `webpack`
   - `npm install webpack@latest webpack-cli@latest --save-dev`
+  - https://webpack.js.org/guides/getting-started/
   - Create `webpack.config.js`
   ```
   const path = require('path');
