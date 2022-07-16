@@ -6,10 +6,12 @@
     "webpack": "webpack --mode=development",
     "webpackw": "webpack --mode=development --watch",
     "run-node": "node ./build/main.js",
-    "run-html": "open-cli ./public/index.html"
+    "run-html": "open-cli ./public/index.html",
+    "serve": "serve ./public"
   },
   "devDependencies": {
     "open-cli": "^7.0.1",
+    "serve": "^14.0.1",
     "typescript": "^4.7.4",
     "webpack": "^5.73.0",
     "webpack-cli": "^4.10.0"

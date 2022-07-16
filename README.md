@@ -131,3 +131,14 @@ sequenceDiagram
     }
   }
   ```
+
+- Install `serve` to run static files locally
+  - `npm install serve@latest --save-dev`
+  - Update `serve` script
+  ```
+  {
+    "scripts": {
+      "serve": "serve ./public"
+    }
+  }
+  ```
