@@ -7,6 +7,9 @@ module.exports = {
   // app entry file
   entry: './src/main.ts',
 
+  // Source map generation https://webpack.js.org/configuration/devtool/
+  devtool: "source-map",
+
   // output bundle location
   output: {
     filename: 'main.js',
