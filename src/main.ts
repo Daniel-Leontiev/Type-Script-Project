@@ -1,5 +1,7 @@
+import { printValue } from '@packages/utils';
+
 const helloWorld = () => {
-    console.log('Hello World');
+    printValue('New package test');
 };
 
 helloWorld();
