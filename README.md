@@ -143,3 +143,59 @@ sequenceDiagram
     }
   }
   ```
+
+- Install `ts-loader` to load packages with webpack
+  - `npm install ts-loader@latest --save-dev`
+  - Add configuration to `webpack.config.js`
+  ```
+  module.exports = {
+    ...
+    // loaders
+    module: {
+      rules: [
+        {
+          test: /\.tsx?/,
+          use: 'ts-loader',
+          exclude: /node_modules/,
+        }
+      ]
+    }
+  }
+  ```
+
+- Update `webpack.config.js` to support better source map generation
+  - Add `devtool: "source-map"`
+  ```
+  module.export = {
+    ...
+    devtool: "source-map"
+  }
+  ```
+
+- Add support for independent `packages` | `modules` for the project
+  - Create `packages` folder to support packages
+  - Create `utils` demo package.
+  - Create `package.json`
+  ```
+  {
+    "name": "@packages/utils",
+    "private": true
+  }
+  ```
+  - Add support for arbitrary pacakges to project `package.json`
+  ```
+  {
+    ...
+    "workspaces": [
+      "packages/**"
+    ]
+  }
+  ```
+  - Add dependencies for `packages/utils` to project
+  ```
+  {
+    "dependencies": {
+      "@packages/utils": "*"
+    }
+  }
+  ```
