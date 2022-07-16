@@ -4,8 +4,8 @@
   ],
   "private": true,
   "scripts": {
-    "build": "tsc",
-    "buildw": "tsc --watch",
+    "build": "tsc --project ./tsconfig.tsc.json",
+    "buildw": "tsc --project ./tsconfig.tsc.json --watch",
     "webpack": "webpack --mode=development",
     "webpackw": "webpack --mode=development --watch",
     "run-node": "node ./build/main.js",
