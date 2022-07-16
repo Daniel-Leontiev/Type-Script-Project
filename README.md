@@ -199,3 +199,13 @@ sequenceDiagram
     }
   }
   ```
+- Add support for building typescript `gcc` style, using `@vercel/ncc` compiler
+  - https://www.npmjs.com/package/@vercel/ncc
+  - `npm install @vercel/ncc --save-dev`
+  - Update `package.json` build scripts
+  ```
+  {
+    ...
+    "ncc": "ncc build -s --no-source-map-register ./src/main.ts -o ./build/"
+  }
+  ```

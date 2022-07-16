@@ -5,10 +5,12 @@
   "private": true,
   "scripts": {
     "build": "tsc --project ./tsconfig.tsc.json",
-    "buildw": "tsc --project ./tsconfig.tsc.json --watch",
+    "build-w": "tsc --project ./tsconfig.tsc.json --watch",
+    "ncc": "ncc build -s --no-source-map-register ./src/main.ts -o ./build/",
+    "ncc-w": "ncc build -w -s --no-source-map-register ./src/main.ts -o ./build/",
     "webpack": "webpack --mode=development",
-    "webpackw": "webpack --mode=development --watch",
-    "run-node": "node ./build/main.js",
+    "webpack-w": "webpack --mode=development --watch",
+    "run": "node ./build/index.js",
     "run-html": "open-cli ./public/index.html",
     "serve": "serve ./public"
   },
@@ -16,6 +18,7 @@
     "@packages/utils": "*"
   },
   "devDependencies": {
+    "@vercel/ncc": "^0.34.0",
     "open-cli": "^7.0.1",
     "serve": "^14.0.1",
     "ts-loader": "^9.3.1",
