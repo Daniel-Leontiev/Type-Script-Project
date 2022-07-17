@@ -244,3 +244,24 @@ sequenceDiagram
     }
   }
   ```
+
+- Add support for loading url resource/fonts/images with `url-loader`
+  - https://google-webfonts-helper.herokuapp.com/fonts/open-sans?subsets=latin
+  - https://dev.to/deepanjangh/setting-up-css-and-sass-with-webpack-3cg
+  - `npm install url-loader@latest --save-dev`
+  ```
+  module.exports = {
+    ...
+
+    module: {
+      rules: [
+        {
+          test: /\.(woff|woff2|eot|ttf|svg|jpg|png)$/,
+          use: {
+            loader: 'url-loader'
+          }
+        }
+      ]
+    }
+  }
+  ```

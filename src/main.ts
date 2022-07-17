@@ -11,5 +11,9 @@ helloWorld();
   const app = document.createElement('div');
   app.id = 'app';
 
+  const text = document.createElement('span');
+  text.textContent = 'Hello Typescript with Webpack!';
+  app.append(text);
+
   document.body.append(app);
 })();

@@ -5,3 +5,9 @@ node_modules
 build
 public/*.js
 public/*.js.map
+
+public/*.woff2
+public/*.woff
+public/*.eot
+public/*.ttf
+public/*.svg
