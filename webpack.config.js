@@ -27,18 +27,16 @@ module.exports = {
     rules: [
       {
         test: /\.tsx?/,
-        use: 'ts-loader',
+        use: ['ts-loader'],
         exclude: /node_modules/,
       },
       {
         test: /\.(s(a|c)ss)$/,
-        use: ['style-loader', 'css-loader', 'sass-loader']
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
         test: /\.(woff|woff2|eot|ttf|svg|jpg|png)$/,
-        use: {
-          loader: 'url-loader'
-        }
+        use: ['url-loader']
       }
     ]
   },

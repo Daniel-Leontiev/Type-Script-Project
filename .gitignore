@@ -4,7 +4,7 @@ node_modules
 #Build
 build
 public/*.js
-public/*.js.map
+public/*.map
 
 public/*.woff2
 public/*.woff
