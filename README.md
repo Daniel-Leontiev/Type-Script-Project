@@ -227,3 +227,20 @@ sequenceDiagram
     ]
   }
   ```
+
+- Add support for css/scss/sass
+  - `npm install css-loader style-loader sass-loader node-sass --save-dev`
+  ```
+  module.exports = {
+    ...
+
+    module: {
+      rules: [
+        {
+          test: /\.(s(a|c)ss)$/,
+          use: ['style-loader', 'css-loader', 'sass-loader']
+        }
+      ]
+    }
+  }
+  ```
