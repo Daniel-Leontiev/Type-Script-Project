@@ -209,3 +209,21 @@ sequenceDiagram
     "ncc": "ncc build -s --no-source-map-register ./src/main.ts -o ./build/"
   }
   ```
+
+- Add support for generating template `html-webpack-plugin`
+  - `npm install html-webpack-plugin@latest --save-dev`
+  ```
+  const HtmlWebpackPlugin = require('html-webpack-plugin');
+  
+  ...
+
+  module.exports = {
+    ...
+    plugins: [
+      new HtmlWebpackPlugin({
+        title: 'Typescript Boilerplate project',
+        filename: 'index.html'
+      })
+    ]
+  }
+  ```

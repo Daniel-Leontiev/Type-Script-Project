@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   // bundling mode
@@ -30,5 +31,13 @@ module.exports = {
         exclude: /node_modules/,
       }
     ]
-  }
+  },
+
+  // plugins
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'Typescript Boilerplate project',
+      filename: 'index.html'
+    })
+  ]
 }
