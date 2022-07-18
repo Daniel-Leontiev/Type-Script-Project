@@ -265,3 +265,29 @@ sequenceDiagram
     }
   }
   ```
+- Add support for `webpack` server
+  - `npm install webpack-dev-server@latest --save-dev`
+  - https://www.npmjs.com/package/webpack-dev-server
+  ```
+  module.exports = {
+    ...
+
+    devServer: {
+      static: {
+        directory: path.join(__dirname, 'public')
+      },
+      compress: false,
+      port: 9000
+    }
+  }
+  ```
+  - Update `package.json` scripts
+  ```
+  {
+    ...
+    
+    "scripts": {
+      "serve-w": "webpack serve"
+    }
+  }
+  ```
